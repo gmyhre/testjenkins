@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"' > myFileeee
+                sh 'echo "Hello World" > myFileeee'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
-                ''' > myFileeee
+                '' > myFileeee'
             }
         }
     }
