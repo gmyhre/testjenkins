@@ -1,12 +1,10 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent any
+    agent { docker { image 'ruby' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-            	
-                echo "Hello World!!!@"
-                
+                sh 'ruby --version'
             }
         }
     }
